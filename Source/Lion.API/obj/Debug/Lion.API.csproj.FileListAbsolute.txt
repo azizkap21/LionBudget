@@ -1,0 +1,14 @@
+C:\Amol\LionBudget\Source\Lion.API\bin\Lion.API.dll.config
+C:\Amol\LionBudget\Source\Lion.API\bin\Lion.API.dll
+C:\Amol\LionBudget\Source\Lion.API\bin\Lion.API.pdb
+C:\Amol\LionBudget\Source\Lion.API\bin\Newtonsoft.Json.dll
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Net.Http.Formatting.dll
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Web.Http.dll
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Web.Http.WebHost.dll
+C:\Amol\LionBudget\Source\Lion.API\bin\Newtonsoft.Json.xml
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Net.Http.Formatting.xml
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Web.Http.xml
+C:\Amol\LionBudget\Source\Lion.API\bin\System.Web.Http.WebHost.xml
+C:\Amol\LionBudget\Source\Lion.API\obj\Debug\Lion.API.csprojResolveAssemblyReference.cache
+C:\Amol\LionBudget\Source\Lion.API\obj\Debug\Lion.API.dll
+C:\Amol\LionBudget\Source\Lion.API\obj\Debug\Lion.API.pdb
