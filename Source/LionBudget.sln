@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lion.API", "Lion.API\Lion.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lion.Tests", "Lion.Tests\Lion.Tests.csproj", "{3F7964F7-5B04-4789-849A-9A5A149CB773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lion.WebClient", "Lion.WebClient\Lion.WebClient.csproj", "{F38A96F1-0EA0-42E2-BBA1-17DD338A05B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3F7964F7-5B04-4789-849A-9A5A149CB773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F7964F7-5B04-4789-849A-9A5A149CB773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F7964F7-5B04-4789-849A-9A5A149CB773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38A96F1-0EA0-42E2-BBA1-17DD338A05B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38A96F1-0EA0-42E2-BBA1-17DD338A05B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38A96F1-0EA0-42E2-BBA1-17DD338A05B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38A96F1-0EA0-42E2-BBA1-17DD338A05B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
