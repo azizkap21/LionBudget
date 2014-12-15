@@ -4,6 +4,7 @@
 
 #Visual Studio files
 *.suo
+Source/*.suo
 *.[Oo]bj
 *.user
 *.aps
