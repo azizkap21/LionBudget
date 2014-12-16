@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Models\AccountAddress.cs" />
+    <Compile Include="Models\AddressType.cs" />
+    <Compile Include="Models\Budget.cs" />
+    <Compile Include="Models\CountryDetail.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\LedgerAccount.cs" />
+    <Compile Include="Models\SecurityQuestion.cs" />
+    <Compile Include="Models\UserAccount.cs" />
+    <Compile Include="Models\UserAddress.cs" />
+    <Compile Include="Models\UserStatus.cs" />
+    <Compile Include="Models\VoucherDetail.cs" />
+    <Compile Include="Models\VoucherHeader.cs" />
+    <Compile Include="Models\VoucherType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
