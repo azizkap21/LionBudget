@@ -25,6 +25,8 @@ Source/*.suo
 *.sdf
 *.dll
 *.pdb
+*.cache
+*.suo
 *.opensdf
 *.unsuccessfulbuild
 ipch/
