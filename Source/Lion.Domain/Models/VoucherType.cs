@@ -10,7 +10,7 @@ namespace Lion.Domain.Models
         public short VoucherTypeID { get; set; }
 
         [StringLength(15)]
-        public string VoucherType { get; set; }
+        public string Name { get; set; }
 
         [StringLength(50)]
         public string Description { get; set; }
