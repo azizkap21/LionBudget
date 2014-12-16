@@ -15,7 +15,7 @@ namespace Lion.Domain.Models
         public Guid AccountID { get; set; }
 
         [ScaffoldColumn(false)]
-        public short AddressType { get; set; }
+        public short AddressTypeId { get; set; }
 
         [StringLength(100)]
         public string AddressLine1 { get; set; }

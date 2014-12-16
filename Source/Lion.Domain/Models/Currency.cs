@@ -16,7 +16,7 @@ namespace Lion.Domain.Models
         public string CurrencySymbol { get; set; }
 
         [StringLength(25)]
-        public string Currency { get; set; }
+        public string Description { get; set; }
 
     }
 }
