@@ -27,7 +27,8 @@ Source/*.suo
 *.unsuccessfulbuild
 ipch/
 obj/
-[Bb]in
+[Bb]in/*.dll
+[Bb]in/*.pdb
 [Dd]ebug*/
 [Rr]elease*/
 Ankh.NoLoad
