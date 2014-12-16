@@ -23,6 +23,8 @@ Source/*.suo
 *.lib
 *.sbr
 *.sdf
+*.dll
+*.pdb
 *.opensdf
 *.unsuccessfulbuild
 ipch/
