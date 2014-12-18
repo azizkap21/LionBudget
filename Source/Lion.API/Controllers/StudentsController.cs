@@ -18,9 +18,9 @@ namespace Lion.API.Controllers
         /// Get all students
         /// </summary>
         /// <returns>All Students</returns>
-        public IEnumerable<Student> Get()
+        public IQueryable<Student> Get()
         {
-            return Student.GetAll().AsEnumerable(); 
+            return Student.GetAll().AsQueryable(); 
         }
 
         // GET api/students/5
