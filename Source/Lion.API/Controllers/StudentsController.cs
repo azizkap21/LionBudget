@@ -14,6 +14,10 @@ namespace Lion.API.Controllers
         IStudent Student = new StudentDetail();
 
         // GET api/students
+        /// <summary>
+        /// Get all students
+        /// </summary>
+        /// <returns>All Students</returns>
         public IEnumerable<Student> Get()
         {
             return Student.GetAll().AsEnumerable(); 

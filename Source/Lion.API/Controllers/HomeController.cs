@@ -8,6 +8,10 @@ namespace Lion.API.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Test Method
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
