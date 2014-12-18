@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace Lion.Domain.Models
 {
     public class VoucherHeader
     {
         [Key]
-        public Guid VoucherID { get; set; }
+        public Guid VoucherHeaderID { get; set; }
 
         [ScaffoldColumn(false)]
         public short VoucherTypeID { get; set; }
@@ -29,6 +30,9 @@ namespace Lion.Domain.Models
         
         
         public DateTime CreatedOn { get; set; }
+
+        public virtual VoucherType VoucherType { get; set; }
+        public virtual IList<VoucherDetail> VoucherDetail { get; set; }
 
     }
 }

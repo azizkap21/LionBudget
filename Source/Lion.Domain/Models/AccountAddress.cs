@@ -40,5 +40,7 @@ namespace Lion.Domain.Models
         public virtual AddressType AddressType { get; set; }
 
         public virtual CountryDetail CountryDetail { get; set; }
+
+
     }
 }

@@ -7,7 +7,7 @@ namespace Lion.Domain.Models
     public class LedgerAccount
     {
         [Key]
-        public Guid AccountID { get; set; }
+        public Guid LedgerAccountID { get; set; }
 
         [ScaffoldColumn(false)]
         public Guid UserID { get; set; }

@@ -9,7 +9,7 @@ namespace Lion.Domain.Models
     public class UserAccount
     {
         [Key]
-        public Guid UserID { get; set; }
+        public Guid UserAccountID { get; set; }
 
         [StringLength(20)]
         public string UserName { get; set; }
@@ -21,7 +21,7 @@ namespace Lion.Domain.Models
         public string Password { get; set; }
 
         [ScaffoldColumn(false)]
-        public short QuestionID { get; set; }
+        public short SecurityQuestionID { get; set; }
 
         [StringLength(50)]
         public string SecretAnswer { get; set; }
@@ -41,6 +41,10 @@ namespace Lion.Domain.Models
       // One to Many relation with Address hence Ilist
         //Virtual keyword is used for Lazy Loading
         public virtual IList<UserAddress> UserAddresses { get; set;}
+
+        // One to Many relation with Budget hence Ilist
+        //Virtual keyword is used for Lazy Loading
+        public virtual IList<Budget> BudgetList { get; set; }
 
         // One to One relation with SecurityQuestion
         // If Property Names are same then we do not have to mention [Foreign Key] attribute

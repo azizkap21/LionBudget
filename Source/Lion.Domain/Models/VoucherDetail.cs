@@ -10,7 +10,7 @@ namespace Lion.Domain.Models
         public Guid VoucherDetailID { get; set; }
         
         [ScaffoldColumn(false)]
-        public Guid VoucherID { get; set; }
+        public Guid VoucherHeaderID { get; set; }
         
         [StringLength(50)]
         public string Item { get; set; }
@@ -22,7 +22,7 @@ namespace Lion.Domain.Models
         public decimal UnitPrice { get; set; }
         
         [ScaffoldColumn(false)]
-        public Guid AccountID { get; set; }
+        public Guid LedgerAccountID { get; set; }
         
         
         public decimal Volume { get; set; }
@@ -32,6 +32,8 @@ namespace Lion.Domain.Models
         
         
         public DateTime CreatedOn { get; set; }
+
+        public virtual LedgerAccount LedgerAccount { get; set; }
 
     }
 }

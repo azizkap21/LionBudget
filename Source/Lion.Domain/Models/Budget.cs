@@ -10,13 +10,17 @@ namespace Lion.Domain.Models
         public Guid BudgetID {get; set; }
 
         [ScaffoldColumn(false)]
-        public Guid AccountID { get; set; }
+        public Guid LedgerAccountID { get; set; }
         
         
         public int BudgetAmount { get; set; }
         
         
         public short BudgetPeriod { get; set; }
+
+
+        public virtual LedgerAccount LedgerAccount { get; set; }
+
 
     }
 }

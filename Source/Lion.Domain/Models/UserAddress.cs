@@ -7,10 +7,10 @@ namespace Lion.Domain.Models
     public class UserAddress
     {
         [Key]
-        public Guid AddressID { get; set; }
+        public Guid UserAddressID { get; set; }
 
         [ScaffoldColumn(false)]
-        public Guid UserID { get; set; }
+        public Guid UserAccountID { get; set; }
 
         [ScaffoldColumn(false)]
         public short AddressType { get; set; }
@@ -32,6 +32,9 @@ namespace Lion.Domain.Models
         
         [ScaffoldColumn(false)]
         public short CountryID { get; set; }
+
+        public virtual UserAccount UserAccount { get; set; }
+        public virtual CountryDetail CountryDetail { get; set; }
 
     }
 }

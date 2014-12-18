@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountAddress.cs" />
     <Compile Include="Models\AddressType.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\CountryDetail.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\LedgerAccount.cs" />
+    <Compile Include="Models\LionBudgetDBContext.cs" />
     <Compile Include="Models\SecurityQuestion.cs" />
     <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Models\UserAddress.cs" />
