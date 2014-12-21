@@ -29,6 +29,7 @@ Source/*.suo
 *.suo
 *.opensdf
 *.unsuccessfulbuild
+*.xml
 ipch/
 obj/
 [Bb]in/*.dll
