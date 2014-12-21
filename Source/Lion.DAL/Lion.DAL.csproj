@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleInjector">
       <HintPath>..\packages\SimpleInjector.2.6.1\lib\net45\SimpleInjector.dll</HintPath>
     </Reference>
@@ -38,6 +44,7 @@
       <HintPath>..\packages\SimpleInjector.2.6.1\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,14 +53,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\GenericRepository.cs" />
+    <Compile Include="Abstract\IAccountAddressRepository.cs" />
+    <Compile Include="Abstract\IAddressTypeRepository.cs" />
+    <Compile Include="Abstract\IBudgetRepository.cs" />
+    <Compile Include="Abstract\ICountryDetailRepository.cs" />
+    <Compile Include="Abstract\ICurrencyRepository.cs" />
+    <Compile Include="Abstract\IGenericRepository.cs" />
+    <Compile Include="Abstract\ILedgerAccountRepository.cs" />
+    <Compile Include="Abstract\ISecurityQuestionRepository.cs" />
+    <Compile Include="Abstract\IUserAccountRepository.cs" />
+    <Compile Include="Abstract\IUserAddressRepository.cs" />
+    <Compile Include="Abstract\IUserStatusRepositoryRepository.cs" />
+    <Compile Include="Abstract\IVoucherDetailRepository.cs" />
+    <Compile Include="Abstract\IVoucherHeaderRepository.cs" />
+    <Compile Include="Abstract\IVoucherTypeRepository.cs" />
+    <Compile Include="Concrete\AccountAddressRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Contract\" />
+    <ProjectReference Include="..\Lion.Domain\Lion.Domain.csproj">
+      <Project>{79fae21b-1661-4929-bb3f-b093eb0eeed1}</Project>
+      <Name>Lion.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
