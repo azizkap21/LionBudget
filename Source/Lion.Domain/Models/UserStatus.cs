@@ -9,6 +9,7 @@ namespace Lion.Domain.Models
         [Key]
         public short UserStatusID { get; set; }
 
+        [Required]
         [StringLength(15)]
         public string Name { get; set; }
 

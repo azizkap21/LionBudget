@@ -10,6 +10,7 @@ namespace Lion.Domain.Models
         [Key]
         public short SecurityQuestionID { get; set; }
 
+        [Required]
         [StringLength(100)]
         public string Question { get; set; }
 

@@ -15,6 +15,11 @@ namespace Lion.Domain.Models
 
         }
 
+        public LionBudgetDBContext()
+        {
+
+        }
+
         public DbSet<AccountAddress> AccountAddress { get; set; }
         public DbSet<AddressType> AddressType { get; set; }
         public DbSet<Budget> Budget { get; set; }

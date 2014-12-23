@@ -9,11 +9,14 @@ namespace Lion.Domain.Models
         [Key]
         public Guid LedgerAccountID { get; set; }
 
+        [Required]
         [ScaffoldColumn(false)]
         public Guid UserID { get; set; }
 
+        [Required]
         [StringLength(15)]
-        public string Account { get; set; }
+        public string LedgerAccountName { get; set; }
+
 
         [StringLength(1)]
         public string CrDr { get; set; }

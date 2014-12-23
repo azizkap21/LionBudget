@@ -9,6 +9,7 @@ namespace Lion.Domain.Models
         [Key]
         public short CurrencyID { get; set; }
 
+        [Required]
         [StringLength(3)]
         public string CurrencyCode { get; set; }
 

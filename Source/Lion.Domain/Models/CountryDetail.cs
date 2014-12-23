@@ -10,15 +10,18 @@ namespace Lion.Domain.Models
         [ScaffoldColumn(false)]
         public short CountryID { get; set; }
 
+        [Required]
         [StringLength(25)]
         public string CountryName { get; set; }
 
+        [Required]
         [StringLength(5)]
         public string CountryCode { get; set; }
 
         [StringLength(5)]
         public string ISDCode { get; set; }
-        
+
+
         [ScaffoldColumn(false)]
         public short CurrencyID { get; set; }
 

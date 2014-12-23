@@ -11,31 +11,41 @@ namespace Lion.Domain.Models
         [Key]
         public Guid UserAccountID { get; set; }
 
+        [Required]
         [StringLength(20)]
         public string UserName { get; set; }
 
         [StringLength(100)]
         public string Email { get; set; }
 
+        [Required]
         [StringLength(20)]
         public string Password { get; set; }
 
+        [Required]
         [ScaffoldColumn(false)]
         public short SecurityQuestionID { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string SecretAnswer { get; set; }
 
+        [Required]
         [ScaffoldColumn(false)]
         public short UserStatusID { get; set; }
 
+        [Required]
         [StringLength(25)]
         public string Contact1 { get; set; }
         
+
         [StringLength(25)]
         public string Contact2 { get; set; }
-        
+
+        [Required]
         public DateTime CreatedDate { get; set; }
+
+
         public DateTime ModifiedDate { get; set; }
 
       // One to Many relation with Address hence Ilist

@@ -13,6 +13,7 @@ namespace Lion.Domain.Models
         [ScaffoldColumn(false)]
         public short AddressTypeID { get; set; }
 
+        [Required]
         [StringLength(15)]
         public string Name { get; set; }
 
