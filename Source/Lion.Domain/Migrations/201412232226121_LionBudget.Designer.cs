@@ -7,13 +7,13 @@ namespace Lion.Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class LionBudgetDBContext : IMigrationMetadata
+    public sealed partial class LionBudget : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(LionBudgetDBContext));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(LionBudget));
         
         string IMigrationMetadata.Id
         {
-            get { return "201412222317081_LionBudgetDBContext"; }
+            get { return "201412232226121_LionBudget"; }
         }
         
         string IMigrationMetadata.Source

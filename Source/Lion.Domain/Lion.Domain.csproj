@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201412222317081_LionBudgetDBContext.cs" />
-    <Compile Include="Migrations\201412222317081_LionBudgetDBContext.Designer.cs">
-      <DependentUpon>201412222317081_LionBudgetDBContext.cs</DependentUpon>
+    <Compile Include="Migrations\201412232226121_LionBudget.cs" />
+    <Compile Include="Migrations\201412232226121_LionBudget.Designer.cs">
+      <DependentUpon>201412232226121_LionBudget.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountAddress.cs" />
@@ -74,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201412222317081_LionBudgetDBContext.resx">
-      <DependentUpon>201412222317081_LionBudgetDBContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201412232226121_LionBudget.resx">
+      <DependentUpon>201412232226121_LionBudget.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
