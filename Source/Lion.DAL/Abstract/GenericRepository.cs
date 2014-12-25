@@ -17,9 +17,9 @@ namespace Lion.DAL.Abstract
 
         bool disposed = false;
 
-        public GenericRepository(string connectionString)
+        public GenericRepository()
         {
-            dbContext = new LionBudgetDBContext(connectionString);
+            dbContext = new LionBudgetDBContext();
             dbSet = dbContext.Set<LBEntity>();
         }
 

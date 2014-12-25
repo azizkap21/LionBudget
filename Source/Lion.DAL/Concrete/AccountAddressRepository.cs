@@ -11,10 +11,7 @@ namespace Lion.DAL.Concrete
     public class AccountAddressRepository:GenericRepository<AccountAddress>, IAccountAddressRepository
     {
 
-        public AccountAddressRepository(string connectionString):base(connectionString)
-        {
-
-        }
+       
 
         public AccountAddress GetAccountAddress(Guid id)
         {

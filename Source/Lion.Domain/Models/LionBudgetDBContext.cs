@@ -9,16 +9,13 @@ namespace Lion.Domain.Models
 {
     public class LionBudgetDBContext : DbContext
     {
-        public LionBudgetDBContext(string connectionString)
-            : base(connectionString)
-        {
-
-        }
-
         public LionBudgetDBContext()
+            : base("name=LionBudgetDBcontext")
         {
 
         }
+
+       
 
         public DbSet<AccountAddress> AccountAddress { get; set; }
         public DbSet<AddressType> AddressType { get; set; }
@@ -34,5 +31,23 @@ namespace Lion.Domain.Models
         public DbSet<VoucherDetail> VoucherDetail { get; set; }
         public DbSet<VoucherType> VoucherType { get; set; }
 
+        
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        ////For Table Mapping 
+            
+        //    modelBuilder.Entity<Budget>().ToTable("tblBudget");
+
+        ////For Preventing Table Creation
+        //    modelBuilder.Ignore<UserAccount>();
+
+
+        //    //For multiple keys
+        //    modelBuilder.Entity<VoucherDetail>().HasKey(x => new { x.VoucherHeaderID, x.VoucherDetailID });
+            
+        //    base.OnModelCreating(modelBuilder);
+
+
+        //}
     }
 }

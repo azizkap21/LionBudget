@@ -70,6 +70,12 @@
     <Compile Include="Abstract\IVoucherTypeRepository.cs" />
     <Compile Include="Concrete\AccountAddressRepository.cs" />
     <Compile Include="Concrete\AddressTypeRepository.cs" />
+    <Compile Include="Concrete\BudgetRepository.cs" />
+    <Compile Include="Concrete\CountryDetailRepository.cs" />
+    <Compile Include="Concrete\CurrencyRepository.cs" />
+    <Compile Include="Concrete\LedgerAccountRepositiry.cs" />
+    <Compile Include="Concrete\SecurityQuestionRepository.cs" />
+    <Compile Include="Concrete\UserAccountRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

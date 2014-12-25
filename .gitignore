@@ -30,9 +30,11 @@ Source/*.suo
 *.opensdf
 *.unsuccessfulbuild
 *.xml
+*.dll.config
+
 ipch/
 obj/
-[Bb]in/*.dll
+[Bb]in/
 [Bb]in/*.pdb
 [Dd]ebug*/
 [Rr]elease*/

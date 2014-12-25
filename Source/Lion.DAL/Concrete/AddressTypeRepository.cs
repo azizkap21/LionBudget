@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace Lion.DAL.Concrete
 {
+    /// <summary>
+    /// Type of address
+    /// </summary>
     public class AddressTypeRepository : GenericRepository<AddressType>, IAddressTypeRepository
     {
 
-        public AddressTypeRepository(string connectionString)
-            : base(connectionString)
-        {
-
-        }
-
+        /// <summary>
+        /// Get AddresType by id
+        /// </summary>
+        /// <param name="id">integer AddressTypeId paremeter</param>
+        /// <returns></returns>
         public AddressType GetAddressType(short id)
         {
             return GetAll().Where(x => x.AddressTypeID == id).FirstOrDefault();
