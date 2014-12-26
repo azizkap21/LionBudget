@@ -10,7 +10,7 @@ namespace Lion.DAL.Concrete
 {
     public class SecurityQuestionRepository:GenericRepository<SecurityQuestion>,ISecurityQuestionRepository
     {
-        public SecurityQuestion GetSecurityQuestion(Guid id)
+        public SecurityQuestion GetSecurityQuestion(short id)
         {
             return GetAll().FirstOrDefault(x => x.SecurityQuestionID == id);
         }

@@ -76,6 +76,11 @@
     <Compile Include="Concrete\LedgerAccountRepositiry.cs" />
     <Compile Include="Concrete\SecurityQuestionRepository.cs" />
     <Compile Include="Concrete\UserAccountRepository.cs" />
+    <Compile Include="Concrete\UserAddressRespository.cs" />
+    <Compile Include="Concrete\UserStatusRepository.cs" />
+    <Compile Include="Concrete\VoucherDetailRepository.cs" />
+    <Compile Include="Concrete\VoucherHeaderRepository.cs" />
+    <Compile Include="Concrete\VoucherTypeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

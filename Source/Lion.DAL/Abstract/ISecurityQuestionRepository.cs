@@ -9,6 +9,6 @@ namespace Lion.DAL.Abstract
 {
     public interface ISecurityQuestionRepository:IGenericRepository<SecurityQuestion>
     {
-        SecurityQuestion GetSecurityQuestion(Guid id);
+        SecurityQuestion GetSecurityQuestion(short id);
     }
 }

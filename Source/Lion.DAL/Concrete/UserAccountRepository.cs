@@ -12,7 +12,7 @@ namespace Lion.DAL.Concrete
     {
         public UserAccount GetUserAccount(Guid id)
         {
-            return GetAll().FirstOrDefault(x => x.UserAccountID = id);
+            return GetAll().FirstOrDefault(x => x.UserAccountID == id);
         }
     }
 }
