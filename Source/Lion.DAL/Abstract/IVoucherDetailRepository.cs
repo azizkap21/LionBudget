@@ -10,5 +10,6 @@ namespace Lion.DAL.Abstract
     public interface IVoucherDetailRepository:IGenericRepository<VoucherDetail>
     {
         VoucherDetail GetVoucherDetail(Guid id);
+
     }
 }

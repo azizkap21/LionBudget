@@ -13,7 +13,7 @@ namespace Lion.DAL.Abstract
     {
         LionBudgetDBContext dbContext;
 
-        DbSet<LBEntity> dbSet;
+        protected DbSet<LBEntity> dbSet;
 
         bool disposed = false;
 

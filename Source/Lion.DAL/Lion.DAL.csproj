@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +90,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Lion.Core\Lion.Core.csproj">
+      <Project>{0acb720d-d26d-4053-a34b-62008cdba70e}</Project>
+      <Name>Lion.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lion.Domain\Lion.Domain.csproj">
       <Project>{79fae21b-1661-4929-bb3f-b093eb0eeed1}</Project>
       <Name>Lion.Domain</Name>

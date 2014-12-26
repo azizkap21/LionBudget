@@ -10,5 +10,9 @@ namespace Lion.DAL.Abstract
     public interface IUserAccountRepository:IGenericRepository<UserAccount>
     {
         UserAccount GetUserAccount(Guid id);
+
+        void PreCache();
+
+        void RecacheUser();
     }
 }
