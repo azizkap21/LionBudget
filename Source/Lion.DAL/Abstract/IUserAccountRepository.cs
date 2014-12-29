@@ -11,8 +11,8 @@ namespace Lion.DAL.Abstract
     {
         UserAccount GetUserAccount(Guid id);
 
-        void PreCache();
+        void PreCacheEntity();
 
-        void RecacheUser();
+        void ReCacheUser(UserAccount userAccount);
     }
 }

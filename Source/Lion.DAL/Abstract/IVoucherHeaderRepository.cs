@@ -10,5 +10,9 @@ namespace Lion.DAL.Abstract
     public interface IVoucherHeaderRepository:IGenericRepository<VoucherHeader>
     {
         VoucherHeader GetVoucherHeader(Guid id);
+
+        void PreCacheEntity();
+
+        void ReCacheVoucherHeader(VoucherHeader voucherHeader);
     }
 }

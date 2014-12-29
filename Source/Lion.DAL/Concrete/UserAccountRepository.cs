@@ -12,7 +12,7 @@ using System.Data.Entity;
 
 namespace Lion.DAL.Concrete
 {
-    public class UserAccountRepository:GenericRepository<UserAccount>,IUserAccountRepository
+    public class UserAccountRepository : GenericRepository<UserAccount>, IUserAccountRepository
     {
         private ConcurrentDictionary<Guid, UserAccount> _userAccountCache;
 
@@ -49,17 +49,61 @@ namespace Lion.DAL.Concrete
             MemoryCache.Default.Set(CommonConstants.CONST_CACHE_USER_ACCOUNT, _userAccountCache, policy);
         }
 
-        public void PreCache()
+        /// <summary>
+        /// Pre Cache User Entity
+        /// </summary>
+        public void PreCacheEntity()
         {
-                SetUserAccountCache();
-
+            SetUserAccountCache();
         }
 
-        
-
-        public void RecacheUser()
+        /// <summary>
+        /// Re Cache User on Update or New 
+        /// </summary>
+        /// <param name="userAccount"></param>
+        public void ReCacheUser(UserAccount userAccount)
         {
-            
+            _userAccountCache = MemoryCache.Default[CommonConstants.CONST_CACHE_USER_ACCOUNT] as ConcurrentDictionary<Guid, UserAccount>;
+
+            if (_userAccountCache == null || _userAccountCache.Count == 0)
+            {
+                SetUserAccountCache();
+            }
+
+            if (_userAccountCache.ContainsKey(userAccount.UserAccountID))
+            {
+                UserAccount oldValue = _userAccountCache[userAccount.UserAccountID];
+                _userAccountCache.TryUpdate(userAccount.UserAccountID, userAccount, oldValue);
+            }
+            else
+            {
+                _userAccountCache.TryAdd(userAccount.UserAccountID, userAccount);
+            }
+        }
+
+        /// <summary>
+        /// Delete User Account and Remove from Cache
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public override bool Delete(UserAccount entity)
+        {
+            base.Delete(entity);
+
+            _userAccountCache = MemoryCache.Default[CommonConstants.CONST_CACHE_USER_ACCOUNT] as ConcurrentDictionary<Guid, UserAccount>;
+
+            if (_userAccountCache == null || _userAccountCache.Count == 0)
+            {
+                SetUserAccountCache();
+            }
+
+            if (_userAccountCache.ContainsKey(entity.UserAccountID))
+            {
+                UserAccount oldValue = null;
+                _userAccountCache.TryRemove(entity.UserAccountID, out oldValue);
+            }
+
+            return true;
         }
     }
 }
