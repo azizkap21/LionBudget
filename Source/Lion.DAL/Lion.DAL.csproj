@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\GenericRepository.cs" />
-    <Compile Include="Abstract\IAccountAddressRepository.cs" />
+    <Compile Include="Abstract\ILedgerAccountAddressRepository.cs" />
     <Compile Include="Abstract\IAddressTypeRepository.cs" />
     <Compile Include="Abstract\IBudgetRepository.cs" />
     <Compile Include="Abstract\ICountryDetailRepository.cs" />
@@ -64,12 +64,12 @@
     <Compile Include="Abstract\ILedgerAccountRepository.cs" />
     <Compile Include="Abstract\ISecurityQuestionRepository.cs" />
     <Compile Include="Abstract\IUserAccountRepository.cs" />
-    <Compile Include="Abstract\IUserAddressRepository.cs" />
+    <Compile Include="Abstract\IUserAccountAddressRepository.cs" />
     <Compile Include="Abstract\IUserStatusRepositoryRepository.cs" />
     <Compile Include="Abstract\IVoucherDetailRepository.cs" />
     <Compile Include="Abstract\IVoucherHeaderRepository.cs" />
     <Compile Include="Abstract\IVoucherTypeRepository.cs" />
-    <Compile Include="Concrete\AccountAddressRepository.cs" />
+    <Compile Include="Concrete\LedgerAccountAddressRepository.cs" />
     <Compile Include="Concrete\AddressTypeRepository.cs" />
     <Compile Include="Concrete\BudgetRepository.cs" />
     <Compile Include="Concrete\CountryDetailRepository.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="Concrete\LedgerAccountRepositiry.cs" />
     <Compile Include="Concrete\SecurityQuestionRepository.cs" />
     <Compile Include="Concrete\UserAccountRepository.cs" />
-    <Compile Include="Concrete\UserAddressRespository.cs" />
+    <Compile Include="Concrete\UserAccountAddressRespository.cs" />
     <Compile Include="Concrete\UserStatusRepository.cs" />
     <Compile Include="Concrete\VoucherDetailRepository.cs" />
     <Compile Include="Concrete\VoucherHeaderRepository.cs" />

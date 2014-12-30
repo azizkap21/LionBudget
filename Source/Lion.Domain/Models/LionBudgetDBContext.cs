@@ -17,7 +17,7 @@ namespace Lion.Domain.Models
 
        
 
-        public DbSet<AccountAddress> AccountAddress { get; set; }
+        public DbSet<LedgerAccountAddress> AccountAddress { get; set; }
         public DbSet<AddressType> AddressType { get; set; }
         public DbSet<Budget> Budget { get; set; }
         public DbSet<CountryDetail> CountryDetail { get; set; }
@@ -25,7 +25,7 @@ namespace Lion.Domain.Models
         public DbSet<LedgerAccount> LedgerAccount { get; set; }
         public DbSet<SecurityQuestion> SecurityQuestion { get; set; }
         public DbSet<UserAccount> UserAccount { get; set; }
-        public DbSet<UserAddress> UserAddress { get; set; }
+        public DbSet<UserAccountAddress> UserAddress { get; set; }
         public DbSet<UserStatus> UserStatus { get; set; }
         public DbSet<VoucherHeader> VoucherHeader { get; set; }
         public DbSet<VoucherDetail> VoucherDetail { get; set; }

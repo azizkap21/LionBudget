@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lion.DAL.Abstract
 {
-    public interface IAccountAddressRepository : IGenericRepository<AccountAddress>
+    public interface ILedgerAccountAddressRepository : IGenericRepository<LedgerAccountAddress>
     {
-        AccountAddress GetAccountAddress(Guid id);
+        LedgerAccountAddress GetAccountAddress(Guid id);
         
     }
 }

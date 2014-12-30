@@ -10,6 +10,9 @@ namespace Lion.Domain.Models
         [Key]
         public Guid VoucherHeaderID { get; set; }
 
+
+        public Guid UserAccountID { get; set; }
+
         [Required]
         [ScaffoldColumn(false)]
         public short VoucherTypeID { get; set; }

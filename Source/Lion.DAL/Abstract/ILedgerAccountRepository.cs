@@ -11,8 +11,10 @@ namespace Lion.DAL.Abstract
     {
         LedgerAccount GetLedgerAccount(Guid id);
 
-        void PreCache();
+        void PreCacheEntity();
 
-        void AddToCache(LedgerAccount ledgerAccount);
+        void ReCacheLedgerAccount(LedgerAccount ledgerAccount);
+
+        List<LedgerAccount> GetLedgerAccountsByUserId(Guid userId);
     }
 }

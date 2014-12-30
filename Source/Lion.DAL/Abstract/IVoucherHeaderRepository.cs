@@ -14,5 +14,7 @@ namespace Lion.DAL.Abstract
         void PreCacheEntity();
 
         void ReCacheVoucherHeader(VoucherHeader voucherHeader);
+
+        ////List<VoucherHeader> GetVouchersByUserId(Guid userId);
     }
 }

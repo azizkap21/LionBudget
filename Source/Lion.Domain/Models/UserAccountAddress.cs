@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Lion.Domain.Models
 {
-    public class UserAddress
+    public class UserAccountAddress
     {
         [Key]
-        public Guid UserAddressID { get; set; }
+        public Guid UserAccountAddressID { get; set; }
 
         [Required]
         [ScaffoldColumn(false)]

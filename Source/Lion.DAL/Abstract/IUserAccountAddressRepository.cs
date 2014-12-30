@@ -7,8 +7,8 @@ using Lion.Domain.Models;
 
 namespace Lion.DAL.Abstract
 {
-    public interface IUserAddressRepository:IGenericRepository<UserAddress>
+    public interface IUserAccountAddressRepository:IGenericRepository<UserAccountAddress>
     {
-        UserAddress GetUserAddress(Guid id);
+        UserAccountAddress GetUserAddress(Guid id);
     }
 }

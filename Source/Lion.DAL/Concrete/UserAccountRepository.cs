@@ -23,15 +23,20 @@ namespace Lion.DAL.Concrete
 
         public override IQueryable<UserAccount> GetAll()
         {
+            GetUserAccountCache();
+
+            List<UserAccount> userAccounts = _userAccountCache.Select(x => x.Value).ToList();
+
+            return userAccounts.AsQueryable();
+        }
+
+        private void GetUserAccountCache()
+        {
             _userAccountCache = MemoryCache.Default[CommonConstants.CONST_CACHE_USER_ACCOUNT] as ConcurrentDictionary<Guid, UserAccount>;
             if (_userAccountCache == null || _userAccountCache.Count == 0)
             {
                 SetUserAccountCache();
             }
-
-            List<UserAccount> userAccounts = _userAccountCache.Select(x => x.Value).ToList();
-
-            return userAccounts.AsQueryable();
         }
 
         private void SetUserAccountCache()
@@ -63,12 +68,7 @@ namespace Lion.DAL.Concrete
         /// <param name="userAccount"></param>
         public void ReCacheUser(UserAccount userAccount)
         {
-            _userAccountCache = MemoryCache.Default[CommonConstants.CONST_CACHE_USER_ACCOUNT] as ConcurrentDictionary<Guid, UserAccount>;
-
-            if (_userAccountCache == null || _userAccountCache.Count == 0)
-            {
-                SetUserAccountCache();
-            }
+            GetUserAccountCache();
 
             if (_userAccountCache.ContainsKey(userAccount.UserAccountID))
             {
@@ -90,12 +90,7 @@ namespace Lion.DAL.Concrete
         {
             base.Delete(entity);
 
-            _userAccountCache = MemoryCache.Default[CommonConstants.CONST_CACHE_USER_ACCOUNT] as ConcurrentDictionary<Guid, UserAccount>;
-
-            if (_userAccountCache == null || _userAccountCache.Count == 0)
-            {
-                SetUserAccountCache();
-            }
+            GetUserAccountCache();
 
             if (_userAccountCache.ContainsKey(entity.UserAccountID))
             {

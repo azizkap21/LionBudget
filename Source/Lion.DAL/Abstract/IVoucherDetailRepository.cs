@@ -15,5 +15,7 @@ namespace Lion.DAL.Abstract
 
         void ReCacheVoucherDetail(VoucherDetail voucherDetail);
 
+        List<VoucherDetail> GetVoucherDetailByVoucherHeaderId(Guid voucherHeaderId);
+
     }
 }

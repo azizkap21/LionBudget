@@ -50,7 +50,7 @@ namespace Lion.Domain.Models
 
       // One to Many relation with Address hence Ilist
         //Virtual keyword is used for Lazy Loading
-        public virtual IList<UserAddress> UserAddresses { get; set;}
+        public virtual IList<UserAccountAddress> UserAddresses { get; set;}
 
         // One to Many relation with Budget hence Ilist
         //Virtual keyword is used for Lazy Loading

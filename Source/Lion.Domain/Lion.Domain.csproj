@@ -53,7 +53,7 @@
       <DependentUpon>201412232226121_LionBudget.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountAddress.cs" />
+    <Compile Include="Models\LedgerAccountAddress.cs" />
     <Compile Include="Models\AddressType.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\CountryDetail.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="Models\LionBudgetDBContext.cs" />
     <Compile Include="Models\SecurityQuestion.cs" />
     <Compile Include="Models\UserAccount.cs" />
-    <Compile Include="Models\UserAddress.cs" />
+    <Compile Include="Models\UserAccountAddress.cs" />
     <Compile Include="Models\UserStatus.cs" />
     <Compile Include="Models\VoucherDetail.cs" />
     <Compile Include="Models\VoucherHeader.cs" />

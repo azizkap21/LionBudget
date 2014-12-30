@@ -1,9 +1,12 @@
-﻿using Lion.Domain.Models;
+﻿using Lion.Core;
+using Lion.Domain.Models;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -82,6 +85,8 @@ namespace Lion.DAL.Abstract
             return success;
         }
 
+       
+
         public void Dispose()
         {
             if(!disposed)
@@ -102,6 +107,8 @@ namespace Lion.DAL.Abstract
 
             disposed = true;
         }
+
+
 
         ~GenericRepository ()
         {

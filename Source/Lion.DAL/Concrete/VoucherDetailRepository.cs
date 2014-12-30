@@ -22,15 +22,20 @@ namespace Lion.DAL.Concrete
 
         public override IQueryable<VoucherDetail> GetAll()
         {
+            GetVoucherDetailCache();
+
+            List<VoucherDetail> voucherDetails = _voucherDetailCache.Select(x => x.Value).ToList();
+
+            return voucherDetails.AsQueryable();
+        }
+
+        private void GetVoucherDetailCache()
+        {
             _voucherDetailCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_DETAIL] as ConcurrentDictionary<Guid, VoucherDetail>;
             if (_voucherDetailCache == null || _voucherDetailCache.Count == 0)
             {
                 SetvoucherDetailCache();
             }
-
-            List<VoucherDetail> voucherDetails = _voucherDetailCache.Select(x => x.Value).ToList();
-
-            return voucherDetails.AsQueryable();
         }
 
          public void PreCacheEntity()
@@ -54,23 +59,14 @@ namespace Lion.DAL.Concrete
 
         }
 
-        public void PreCacheEntity()
-        {
-            SetvoucherDetailCache();
-        }
-
+  
         /// <summary>
         /// Re Cache User on Update or New 
         /// </summary>
         /// <param name="userAccount"></param>
         public void ReCacheVoucherDetail(VoucherDetail VoucherDetail)
         {
-            _voucherDetailCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_DETAIL] as ConcurrentDictionary<Guid, VoucherDetail>;
-
-            if (_voucherDetailCache == null || _voucherDetailCache.Count == 0)
-            {
-                SetvoucherDetailCache();
-            }
+            GetVoucherDetailCache();
 
             if (_voucherDetailCache.ContainsKey(VoucherDetail.VoucherDetailID))
             {
@@ -92,12 +88,7 @@ namespace Lion.DAL.Concrete
         {
             base.Delete(entity);
 
-            _voucherDetailCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_DETAIL] as ConcurrentDictionary<Guid, VoucherDetail>;
-
-            if (_voucherDetailCache == null || _voucherDetailCache.Count == 0)
-            {
-                SetvoucherDetailCache();
-            }
+            GetVoucherDetailCache();
 
             if (_voucherDetailCache.ContainsKey(entity.VoucherDetailID))
             {
@@ -106,6 +97,16 @@ namespace Lion.DAL.Concrete
             }
 
             return true;
+        }
+
+
+        public  List<VoucherDetail> GetVoucherDetailByVoucherHeaderId(Guid voucherHeaderId)
+        {
+
+            List<VoucherDetail> result = GetAll().Where(x => x.VoucherHeaderID == voucherHeaderId).ToList();
+
+            return result;
+
         }
     }
 }

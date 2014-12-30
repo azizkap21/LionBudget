@@ -5,19 +5,19 @@ using System.ComponentModel.DataAnnotations;
 namespace Lion.Domain.Models
 {
   
-    public class AccountAddress
+    public class LedgerAccountAddress
     {
         [Key]
         [ScaffoldColumn (false)]
-        public Guid AccountAddressID { get; set; }
+        public Guid LedgerAccountAddressID { get; set; }
 
         [Required]
         [ScaffoldColumn (false)]
-        public Guid AccountID { get; set; }
+        public Guid LedgerAccountID { get; set; }
 
         [Required]
         [ScaffoldColumn(false)]
-        public short AddressTypeId { get; set; }
+        public short AddressTypeID { get; set; }
 
         [Required]
         [StringLength(100)]

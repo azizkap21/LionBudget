@@ -27,15 +27,20 @@ namespace Lion.DAL.Concrete
 
         public override IQueryable<VoucherHeader> GetAll()
         {
+            GetVoucherHeaderCache();
+
+            List<VoucherHeader> voucherHeaders = _voucherHeaderCache.Select(x => x.Value).ToList();
+
+            return voucherHeaders.AsQueryable();
+        }
+
+        private void GetVoucherHeaderCache()
+        {
             _voucherHeaderCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_HEADER] as ConcurrentDictionary<Guid, VoucherHeader>;
             if (_voucherHeaderCache == null || _voucherHeaderCache.Count == 0)
             {
                 SetVoucherHeaderCache();
             }
-
-            List<VoucherHeader> voucherHeaders = _voucherHeaderCache.Select(x => x.Value).ToList();
-
-            return voucherHeaders.AsQueryable();
         }
 
 
@@ -61,10 +66,7 @@ namespace Lion.DAL.Concrete
    
         }
 
-        public void PreCacheEntity()
-        {
-            SetVoucherHeaderCache();
-        }
+
 
         /// <summary>
         /// Re Cache User on Update or New 
@@ -72,12 +74,7 @@ namespace Lion.DAL.Concrete
         /// <param name="userAccount"></param>
         public void ReCacheVoucherHeader(VoucherHeader voucherHeader)
         {
-            _voucherHeaderCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_HEADER] as ConcurrentDictionary<Guid, VoucherHeader>;
-
-            if (_voucherHeaderCache == null || _voucherHeaderCache.Count == 0)
-            {
-                SetVoucherHeaderCache();
-            }
+            GetVoucherHeaderCache();
 
             if (_voucherHeaderCache.ContainsKey(voucherHeader.VoucherHeaderID))
             {
@@ -99,12 +96,7 @@ namespace Lion.DAL.Concrete
         {
             base.Delete(entity);
 
-            _voucherHeaderCache = MemoryCache.Default[CommonConstants.CONST_CACHE_VOUCHER_HEADER] as ConcurrentDictionary<Guid, VoucherHeader>;
-
-            if (_voucherHeaderCache == null || _voucherHeaderCache.Count == 0)
-            {
-                SetVoucherHeaderCache();
-            }
+            GetVoucherHeaderCache();
 
             if (_voucherHeaderCache.ContainsKey(entity.VoucherHeaderID))
             {
