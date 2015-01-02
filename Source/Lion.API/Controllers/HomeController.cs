@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lion.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,10 @@ namespace Lion.API.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
+            IRepositoryContainer repocon = new RepositoryContainer();
+
+            repocon.BudgetRepository.GetAll();
+
 
             return View();
         }

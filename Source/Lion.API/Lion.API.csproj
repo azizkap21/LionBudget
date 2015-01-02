@@ -48,6 +48,14 @@
     <Reference Include="Microsoft.Data.OData">
       <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleInjector, Version=2.6.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleInjector.2.6.1\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Diagnostics, Version=2.6.1.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleInjector.2.6.1\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -132,6 +140,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RegisterContainer.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
@@ -223,9 +232,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lion.Business\Lion.Business.csproj">
+      <Project>{44bd5afe-ecc5-427a-9f73-c9e362b11733}</Project>
+      <Name>Lion.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lion.Core\Lion.Core.csproj">
       <Project>{0acb720d-d26d-4053-a34b-62008cdba70e}</Project>
       <Name>Lion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lion.DAL\Lion.DAL.csproj">
+      <Project>{d0fd2e8e-1323-4500-b6fe-bbc8b4338f3a}</Project>
+      <Name>Lion.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
