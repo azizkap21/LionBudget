@@ -11,7 +11,7 @@ using Lion.Core;
 
 namespace Lion.DAL.Concrete
 {
-    class LedgerAccountRepository:GenericRepository<LedgerAccount>,ILedgerAccountRepository
+    public class LedgerAccountRepository:GenericRepository<LedgerAccount>,ILedgerAccountRepository
     {
         public LedgerAccount GetLedgerAccount(Guid id)
         {

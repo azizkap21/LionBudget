@@ -11,7 +11,9 @@ namespace Lion.API.Controllers
     public class StudentsController : ApiController
     {
 
-        IStudent Student = new StudentDetail();
+        IStudent _student = new StudentDetail();
+
+       
 
         // GET api/students
         /// <summary>
@@ -20,13 +22,13 @@ namespace Lion.API.Controllers
         /// <returns>All Students</returns>
         public IQueryable<Student> Get()
         {
-            return Student.GetAll().AsQueryable(); 
+            return _student.GetAll().AsQueryable(); 
         }
 
         // GET api/students/5
         public Student Get(int id)
         {
-            return Student.FindStudentById (id);
+            return _student.FindStudentById (id);
         }
 
         // POST api/students
