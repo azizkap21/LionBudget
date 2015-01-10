@@ -1,5 +1,6 @@
 namespace Lion.Domain.Migrations
 {
+    using Lion.Domain.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -12,7 +13,7 @@ namespace Lion.Domain.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Lion.Domain.Models.LionBudgetDBContext context)
+        protected override void Seed(LionBudgetDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -26,6 +27,12 @@ namespace Lion.Domain.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            //LionBudgetDBContext context = new LionBudgetDBContext();
+
+            context.AddressType.AddOrUpdate(
+                new AddressType { AddressTypeID= 1, Description="Mailing Address", Name="MailingAddress"},
+                new AddressType { AddressTypeID= 2, Description="Billing Address", Name="BillingAddress"});
         }
     }
 }

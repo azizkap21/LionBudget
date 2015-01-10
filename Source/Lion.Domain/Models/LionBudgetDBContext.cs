@@ -10,7 +10,7 @@ namespace Lion.Domain.Models
     public class LionBudgetDBContext : DbContext
     {
         public LionBudgetDBContext()
-            : base("name=LionBudgetDBcontext")
+            : base("LionBudgetDBcontext")
         {
 
         }
