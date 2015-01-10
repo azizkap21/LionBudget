@@ -20,7 +20,6 @@ namespace Lion.API.Controllers
 
             repocon.BudgetRepository.GetAll();
 
-
             return View();
         }
     }

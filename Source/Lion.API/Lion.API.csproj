@@ -244,6 +244,10 @@
       <Project>{d0fd2e8e-1323-4500-b6fe-bbc8b4338f3a}</Project>
       <Name>Lion.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lion.Domain\Lion.Domain.csproj">
+      <Project>{79fae21b-1661-4929-bb3f-b093eb0eeed1}</Project>
+      <Name>Lion.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
