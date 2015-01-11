@@ -30,7 +30,6 @@ namespace Lion.API
             Container container = new Container();
 
             container.RegisterSingle<IAddressTypeRepository>(new AddressTypeRepository());
-            container.RegisterSingle<IAddressTypeRepository>(new AddressTypeRepository());
             container.RegisterSingle<ILedgerAccountAddressRepository >(new LedgerAccountAddressRepository());
             container.RegisterSingle<IBudgetRepository>(new BudgetRepository());
             container.RegisterSingle<ICountryDetailRepository>(new CountryDetailRepository());

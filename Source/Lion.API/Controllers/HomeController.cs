@@ -18,9 +18,9 @@ namespace Lion.API.Controllers
             ViewBag.Title = "Home Page";
             IRepositoryContainer repocon = new RepositoryContainer();
 
-            repocon.BudgetRepository.GetAll();
+            List<Lion.Domain.Models.AddressType> addressTypes = repocon.AddressTypeRepository.GetAll().ToList();
 
-            return View();
+            return View(addressTypes);
         }
     }
 }
