@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201412232226121_LionBudget.Designer.cs">
       <DependentUpon>201412232226121_LionBudget.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501111955525_lion.domain.migrations.configuration.cs" />
+    <Compile Include="Migrations\201501111955525_lion.domain.migrations.configuration.Designer.cs">
+      <DependentUpon>201501111955525_lion.domain.migrations.configuration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LedgerAccountAddress.cs" />
     <Compile Include="Models\AddressType.cs" />
@@ -76,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201412232226121_LionBudget.resx">
       <DependentUpon>201412232226121_LionBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501111955525_lion.domain.migrations.configuration.resx">
+      <DependentUpon>201501111955525_lion.domain.migrations.configuration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

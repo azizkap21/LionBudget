@@ -65,7 +65,7 @@ namespace Lion.Domain.Migrations
                 new VoucherType { VoucherTypeID = 2, Description = "Income Voucher", Name = "Income" }
                 );
 
-       
+            context.SaveChanges();
         }
     }
 }
